@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="grubu calistirma">
+    <test name="Istenen grubu calistirma" verbose="5">
+        <!--
+        istenen bir grubu calistirmak icin öncelikle o gruptaki test methodlarinin
+        isaretlenmis olmasi gerekir
+
+        Calistrimaya gelindiginde
+        iki seyi belirtmemeiz gerekir
+        1- calisacak test methodlari nerede
+        2- calisacak grup ismi ne ?
+
+        Bu kii bilgiyi vermek icin iki hiyerarasi olusturmamiz gerekir
+
+       Bir method a birden fazla grup ismi verilebilir
+
+
+suit satirina eklenen verbose run edince asagida yazan konsolda ayrinti
+miktarinin yani aciklama miktarini ayarlariz
+        -->
+        <groups>
+            <run>
+                <include name="minireg1"></include>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+       <packages>
+           <package name="tests.day14_testNGFrameWork"></package>
+           <package name="tests.day15_SoftAssert"></package>
+       </packages>
+
+
+    </test>
+</suite>
